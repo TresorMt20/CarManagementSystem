@@ -9,33 +9,33 @@ import HomePage from "../../features/home/HomePage";
 import Header from "./Header";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-  const paletteType  = darkMode ? 'dark' : 'light'
-  const theme = createTheme({
-    palette: {
-      mode: paletteType,
-      background: {
-        default: paletteType === 'light' ? '#eaeaea' : '#121212'
-      }
-    }
-  })
+  // const [darkMode, setDarkMode] = useState(false);
+  // const paletteType  = darkMode ? 'dark' : 'light'
+  // const theme = createTheme({
+  //   palette: {
+  //     mode: paletteType,
+  //     background: {
+  //       default: paletteType === 'light' ? '#eaeaea' : '#121212'
+  //     }
+  //   }
+  // })
 
-  function handleThemeChange() {
-    setDarkMode(!darkMode);
-  }
+  // function handleThemeChange() {
+  //   setDarkMode(!darkMode);
+  // }
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Header darkMode={darkMode} handleThemeChange={handleThemeChange} />
-      <Container>
+    // <ThemeProvider theme={theme}>
+    //   <CssBaseline />
+    //   {/* <Header darkMode={darkMode} handleThemeChange={handleThemeChange} /> */}
+      <div>
+        <Header/>
         <Route exact path='/' component={HomePage} />
         <Route exact path='/catalog' component={Catalog} />
         <Route path='/catalog/:id' component={ProductDetails} />
         <Route path='/about' component={AboutPage} />
         <Route path='/contact' component={ContactPage} />
-      </Container>
-    </ThemeProvider>
+      </div>
   );
 }
 
