@@ -15,6 +15,6 @@ export default function ProductList({ products }: Props) {
                     <ProductCard product={product} />
                 </div>
             ))}
-        </>
+            </>
     )
 }

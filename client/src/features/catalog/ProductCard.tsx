@@ -9,9 +9,9 @@ interface Props {
 
 export default function ProductCard({ product }: Props) {
     return (
-        <div className="card" key={product.id}>
+        <div   key={product.id}>
         <Link to={`/product/${product.id}`}>
-            <img src={product.pictureUrl} alt=""/>
+            <img className="img medium" src={product.pictureUrl} alt=""/>
         </Link>
         <div className="content">
             <h3>
